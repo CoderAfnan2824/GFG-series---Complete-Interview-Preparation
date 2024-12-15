@@ -84,7 +84,7 @@ Precedence: z=x=y is equal to x=y then z=x because of right side precedence
 Short circuiting: in &&, || there is one case where condition is not checked
 
 Bitwise operation:
-  ![Uploading image.png…]()
+  ![image](https://github.com/user-attachments/assets/f1cddabe-25a7-4ccb-9e25-69f57fd38c3f)
 
 Left shift operation:
 X<<1: 2 will be multiplied ‘1’ time to x
@@ -93,4 +93,86 @@ X<<4: 2 will be multiplied ‘4’ times to x
 Right shift operation:
 X>>3: x will be divided ‘3’ times by 2 and leading values will be filled with ones
 x>>>3: x will be divided ‘3’ times by 2 and leading values will be zeroes instead of one
+
+
+2.	Loops , functions, control statements
+
+If else used to control conditions in below:
+ ![image](https://github.com/user-attachments/assets/1a6c9d65-33f4-40e5-8aa4-44161d79ba01)
+
+Switch: for multi branch case, use switch over ifelse for more readability.
+ ![image](https://github.com/user-attachments/assets/7217ccb4-08e5-425f-8f36-107e9e46664d)
+
+Without break, the control goes to each case and end at default.
+We don’t need break at default.
+Default runs when any of the above case is missed.
+
+Math.max(n1,n2) will return max value between n1 and n2
+
+
+LEAP YEAR is a year which has 28 days in february and it comes once in 4 years. Example: 
+Any of Below 2 rules must apply 
+ ![image](https://github.com/user-attachments/assets/47b05529-8034-48a9-9668-143f83fcdcb8)
+
+
+LOOPS Below are applications
+![image](https://github.com/user-attachments/assets/acb85b8f-aaa6-47bf-844f-2df78cd7a7d5)
+ 
+
+For LOOP
+For(initialization;condition check; loop variable change)
+For(  ;  ;  ) is an infinite loop
+For(  ;true;) is also an infinite loop
+For(;;;); print(n) this will print only once as ; will end for before print statement
+
+
+Enhanced for Loop: It is used traversal of collections/objects
+This loop can only read and can’t modify the elements
+for (String x:array)
+        {
+            System.out.println(x);
+        }
+
+
+WHILE
+While(condition){
+Statement
+}
+While(true)  and while(condition);{statement} both are infinite loop statements
+
+DO WHILE:   This will run statement at least once and then check the condition
+Do{
+statement
+}while();
+FOR VS WHILE
+For is used for fixed structure
+While is used for dynamic structure where condition changes with time
+
+BREAK n CONTINUE:  Used with if statement in the loops
+Break: It will stop the loop and goes to next statement after the loop
+Continue: It will skip the iteration i.e., it skips all lines below continue statement within the loop and goes to next iteration
+
+
+
+Methods:
+A method is a collection of statements that perform some specific task 
+All primitives are passed by values i.e., as a copy
+All non-primitives are passed by references
+ ![image](https://github.com/user-attachments/assets/d57d1989-daf4-4dd7-a66e-bad513b4db01)
+
+
+Access Modifier
+•	Modifier-: Defines the access type of the method i.e., from where it can be accessed in your application. In Java, there are 4 types of access specifiers:
+o	public: accessible in all the classes in your application.
+o	protected: accessible within the class in which it is defined and in its subclass(es)
+o	private: accessible only within the class in which it is defined.
+o	default (declared/defined without using any modifier): accessible within the same class and the package within which its class is defined.
+![Uploading image.png…]()
+
+ 
+
+Math.log10(1000) will return 3
+Math.log10(100000) will return 5
+
+
 
