@@ -98,6 +98,7 @@ x>>>3: x will be divided ‘3’ times by 2 and leading values will be zeroes in
 2.	Loops , functions, control statements
 
 If else used to control conditions in below:
+
  ![image](https://github.com/user-attachments/assets/1a6c9d65-33f4-40e5-8aa4-44161d79ba01)
 
 Switch: for multi branch case, use switch over ifelse for more readability.
