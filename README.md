@@ -193,6 +193,41 @@ Math.log10(1000) will return 3
 Math.log10(100000) will return 5
 Math.max(n1,n2) will return max value between n1 and n2
 
+Integer.parseInt(str) will convert string value into the int type.
+
+4. Advanced
+Biginteger is a class in java which stores large values. BigInteger class is present in java.math.* library.
+Syntax:
+BigInteger c=new BigInteger("5325");
+Let's say 'a' is int type, then c=BigInteger.valueOf(a);
+
+You can perform operation on BigInteger as below:
+a.add(b);  a.subtract(b);  multiplay divide remainder
+a.compareTo(b): will return 0,+1,-1 based on a and b values
+
+BigInteger to other datatype conversion:
+int a=A.intValue();
+long b=B.longValue();
+String s=S.toString();
+
+a.isProbablePrime(1) will return check for prime bigInteger value. The '1' in bracket is certainity. 1 means 100% check if 'a' is prime or not
+a.nextProbablePrime() will return next prime after 'a'
+
+Methods of BigInteger
+BigInteger abs​(): This method returns a BigInteger whose value is the absolute value of this BigInteger.
+BigInteger gcd​(BigInteger val): This method returns a BigInteger whose value is the greatest common divisor of abs(this) and abs(val).
+BigInteger max​(BigInteger val): This method returns the maximum of this BigInteger and val.
+BigInteger min​(BigInteger val): This method returns the minimum of this BigInteger and val.
+BigInteger mod​(BigInteger m): This method returns a BigInteger whose value is (this mod m).
+BigInteger modPow​(BigInteger exponent, BigInteger m): This method returns a BigInteger whose value is (thisexponent mod m).
+BigInteger negate​(): This method returns a BigInteger whose value is (-this).
+BigInteger or​(BigInteger val): This method returns a BigInteger whose value is (this | val).
+BigInteger pow​(int exponent): This method returns a BigInteger whose value is (thisexponent).
+BigInteger shiftLeft​(int n): This method returns a BigInteger whose value is (this << n).
+BigInteger shiftRight​(int n): This method returns a BigInteger whose value is (this >> n).
+BigInteger sqrt​(): This method returns the integer square root of this BigInteger.
+
+
 
 
 
