@@ -227,6 +227,127 @@ BigInteger shiftLeft​(int n): This method returns a BigInteger whose value is 
 BigInteger shiftRight​(int n): This method returns a BigInteger whose value is (this >> n).
 BigInteger sqrt​(): This method returns the integer square root of this BigInteger.
 
+=======================================================================================================
+PROGRAMMING - ADVANCED:
+
+1. Lambda expression: It's a function without name and class. They are implemented using functional interface.
+With lambda expression, you don't need to create a child class to implement that method, you can create directly.
+Use curly braces for multi line statements.
+
+2. Functional interface: It's an interface that contains exactly one abstract method and may contain other methods.
+
+3. Stream: It's a pipeline of functions for which the input will be array, collections or stream of variables(even numbers, prime numbers,etc)
+Stream has 3 parts: source, intermediaries and terminal
+Lets say l is a list, implementing stream on 'l' is
+l.stream
+.filter(x->x%2==0)
+.filter(x>10)
+.foreach(system.out::println);
+
+4.Method reference: Method references in Java 8 are a shorthand notation of a lambda expression to call a method. They provide an easy-to-read and concise way to refer to methods without executing them. Method reference can be implemented on both static n instance methods, even constructors
+
+// Lambda expression
+(args) -> ClassName.staticMethod(args)
+
+// Method reference
+ClassName::staticMethod
+
+==========================================================CLASSES N OBJECTS====================================================================================
+1. CLASS n OBJECTS:
+Class is a blueprint/prototype from which real life entities(obj) are created.
+
+Object has 3 parts: state(members), behavior(method) and Identity(unique name);
+
+2. ENCAPSULATION: It is the hiding/restricting of data members/methods using access-modifiers.
+
+Example: Suppose, you create a date class in which you declare a variable. Other teams use that class to get date. Now you want to modify layout of date, you can modify the variable. But if you had declared that variable as public, it's impossible as others might be using that variable. TO avoid, that kind of errors, we declared it as private.
+
+3. ACCESS MODIFIERS: There are 4 types. Always try to use as strict as possible access modifier
+private: Within the class( only methods of that class can access the members)
+default: When you don't specify anything; is accessible only in the package(the folder which contains all classes n interfaces)
+protected: Within the package and all the child classes of other packages
+public: accessible everywhere 
+A child class can modify access to less strict. But error occurs if more strictness is added.
+Ex: if child class modify access to private from public, error occurs.
+
+Encapsulation is defined as the wrapping up of data under a single unit. It's also called as data-hiding.
+
+
+4. 'this' reference: It is a special reference in OOPs. It is used in classes to point to current object & it's members. You can call the constructor using this as this(0, 3);
+example: p.setX(2).setY(3)
+point setX(int x){
+    this.x=x;
+    return this;
+  }
+
+5. 'final' keyword: It's a state which can't modify it's behavior once it is assigned.
+variable: can't be modified once assigned
+method: can't be overridden(child class can't modify the method) 
+class: A class can't have subclasses/ child classes
+object: Final in objects prevent new reference after initialization
+final String p=new String("Afnan");
+p=new String("Adnan);  here we will get error as we are providing new reference
+
+6. 'static': static members can be accessed without creating objects. They are shared among objects.
+static methods cannot access non-static members. But non-static methods can access static members.
+static methods cannot have access to 'this' reference.
+
+7. constructor: It's method with class name and no return type. When we define one constructor, it's our responsibility to define all constructors.
+
+8. Inheritance: This is a concept in which class can derive properties from base class.
+super(): is used to call the constructor of base class. It's used to access parent member in derived class.
+Object class: It's the root class in java from which all classes are inherited. clone(), equals(), hashcode(), toString() are few methods of object class.
+
+Types of Inheritance:
+single: B -> A
+multilevel: c -> B -> A
+Heirarchical: (B - C - D) -> A
+Multiple inheritance: C -> (A - B) : not allowed in java. can be done using functional interface
+Hybrid: D -> (B - C) -> A
+
+9. Polymorphism: It's a concept of having many forms.
+There are 2 types: compile/static and run/dynamic
+a. static: sum(a, b), sum(a,b,c) sum(string s,string s2)
+Method overloading takes place in above as same name method is used. only return type change does not cause method overloading. Automatic conversion takes place when method with exact datatype is not found.
+
+b. dynamic: print() from base class is different to print() from derived class
+Method overriding occurs at run time. An object is referred at run time. so method overriding helps in assigning appropriate method to each class objects.
+
+static methods are not overridden.
+Ex: static print() method is present in base n derived class. 
+But base b=new derived, b.print() will be called from base class. overriding doesn't takes place.
+
+A base class can refer to a derived class object, but reverse is not possible
+base b=new derived();  -> correct
+derived d=new base();  -> this is wrong
+
+10. Abstraction: It's concept of later implementation of a method. You define method in abstract class or interface and implement in immediate derived classes. Data Abstraction is the property by virtue of which only the essential details are displayed to the user.
+You can't create an object/instance of abstract class. But you can create reference of abstract class.
+
+A class can be abstract without an abstract method. This is done to prevent object creation.
+If a subclass doesn't implement abstract method, then the subclass must also be declared abstract.
+
+11. Interface: 
+All members are public static final. no other access modifier allowed except default n public.
+Multiple inheritance allowed using interfaces; A class can implement multiple interfaces; An interface can extend multiple interfaces.
+Interface base{}
+Derived implements base{}
+
+
+Difference between inheritance n abstract class:
+Interfaces cannot have constructors.
+All methods are public static final in interfaces.
+Multiple inheritance allowed in interfaces.
+
+Encapsulation is data hiding(information hiding) while Abstraction is detail hiding(implementation hiding).
+
+
+
+
+
+
+
+
 
 
 
