@@ -170,6 +170,116 @@ BREAK n CONTINUE:  Used with if statement in the loops
 Break: It will stop the loop and goes to next statement after the loop
 Continue: It will skip the iteration i.e., it skips all lines below continue statement within the loop and goes to next iteration
 
+===============================================================================ARRAYS & STRINGS===============================================================================================
+In Java, Array variables are used as references of an object. Uninitialised arrays has default values (0 for int)
+Different ways to create an array in Java:
+
+ ![image](https://github.com/user-attachments/assets/a191d605-d86c-4242-8e03-aa39d6ceb2ed)
+
+Difference between []a and a[]:
+Here int[] is different from int. So it causes a syntax error:
+
+  ![image](https://github.com/user-attachments/assets/00359c72-5457-4328-ac1e-e93409fc6694)
+
+b should be initialised as an array, not as a variable
+ 
+![image](https://github.com/user-attachments/assets/6c2285c8-06ff-41af-8219-e349c281530f)
+
+
+
+2D array:
+In java, you can’t specify dimentions for multidimentional arrays.
+Eg: int[][] a={{1,3,5},{5,7,8}}
+ Int[][] a ={{1,6,8,0},{1,4}}
+Int[][] a=new int[3][2];
+
+ ![image](https://github.com/user-attachments/assets/daa6dafd-034d-4ed6-b72a-87e186819df9)
+
+
+Jagged Arrays: It’s an array where no of elements in each row is incremented by:
+
+ ![image](https://github.com/user-attachments/assets/0f19ab7f-aa7a-4600-affb-73c0e71d201b)
+
+
+Clone an Array: Clone will only deep copy(copy by value). 
+
+
+
+
+
+
+
+But in multidimentional array, shallow copy(references) takes place. Sub arrays are matched
+ 
+![image](https://github.com/user-attachments/assets/ae603039-575c-4108-a594-8f90804c3b7e)
+
+![image](https://github.com/user-attachments/assets/549481ad-ab5f-458e-8b29-ec647a70ec08) 
+
+String: 
+It’s a sequence of characters 
+java store character in UTF-16
+String are immutable which means a constant and cannot be changed once created.
+Strings can be defined in 3 ways:
+1.	String: immutable( they can’t be changed once created)
+2.	StringBuffer: mutable & thread safe(used in multithreading)
+3.	StringBuilder: mutable & non-thread safe
+
+![image](https://github.com/user-attachments/assets/d42926b8-ab4b-47d6-b49b-242cf378c4b4)
+ 
+String functions:
+1.	Length(): gives no of characters in string
+2.	charAt(3): returns character at index 3
+3.	substring(3): returns string from index 2 to end 
+4.	substring(2,5): returns string from index 2 to 4 (5-1)
+5.	contains(s1): returns true if substring is present. Else false
+6.	s1.equals(s2): returns true if both are same lexographically. Else false
+7.	compareTo(s2): compares s2 with s1 lexographically and returns
+0 if same
+-(difference) if s1 is smaller than s2. Eg: (s1=a,s2=h  s1.compareTo(s2) will return 7
++(difference) if s1 is greater than s2
+8.	indexOf(s2): return first occurance of s2 in s1. If not found, return -1
+9.	indexOf(s2,index): return occurance of s2 after index.
+10.	S1.concat(“string”) will add string just like s1=s1+”string”
+11.	equalsIgnoreCase(): return true if both string are same irrespective of case
+12.	toUpperCase(): will convert string to uppercase
+13.	toLowerCase(): will convert string to lowercase
+14.	stringBuilder .append(“string”): appends string
+String literal pool: 
+Any String defined is stored in the pool. So if couple of string variables has same string, they point to same memory
+Strings are very costly in terms of space compared to StringBUilder and StringBuffer as these both are mutable. So for example, if in an infinite loop, if string appends, then everytime new memory location is used 
+But for stringbuilder and stringbuffer, it doesn’t work the same. They work like arrays
+
+Why use equals() over ==?
+Equals compare string content while ‘==’ compares string address
+
+Methods same in all 3 string types:
+
+ ![image](https://github.com/user-attachments/assets/c954f4d2-d7f8-4288-9ec2-cef442fb1548)
+
+Methods in stringBuilder & stringBuffer:
+
+ ![image](https://github.com/user-attachments/assets/6e24e8c9-cbb5-4781-87c0-51cca9555680)
+
+Append(x): will append x
+Insert(offset,x): insert x at offset position and moves characters from offset to the right
+S1=”afnan subhani”
+S1.insert(5,”ahmed”) , s1= ‘Afnanahmed Subhani
+SetCharAt(index, c): will modify character to c at index
+Reverse(): returns the reverse of the string
+deleteCharAt(index): delete character at index and return string
+delete(start, end): delete string from start to end and return string
+replace(start,end,str): replace whole string with str
+
+The toString() method returns the string itself.
+This method may seem redundant, but its purpose is to allow code that is treating the string as a more generalized object to know its string value without casting it to String type.
+Eg: s1 and s2 are string buffer. Now to check if both are same ,we use
+S1.ToString().equals(s2.ToString());
+
+S1&1 
+S1>>1;
+will check if remainder is zero and divides number by 2
+
+=============================================================================================================================================================================================
 
 Methods:
 A method is a collection of statements that perform some specific task 
@@ -186,7 +296,7 @@ o	protected: accessible within the class in which it is defined and in its subcl
 o	private: accessible only within the class in which it is defined.
 o	default (declared/defined without using any modifier): accessible within the same class and the package within which its class is defined.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/3dc5ee90-62eb-46d3-8c57-93809e960358)
 
 
 Math.log10(1000) will return 3
@@ -269,6 +379,9 @@ protected: Within the package and all the child classes of other packages
 public: accessible everywhere 
 A child class can modify access to less strict. But error occurs if more strictness is added.
 Ex: if child class modify access to private from public, error occurs.
+
+![Uploading image.png…]()
+
 
 Encapsulation is defined as the wrapping up of data under a single unit. It's also called as data-hiding.
 
