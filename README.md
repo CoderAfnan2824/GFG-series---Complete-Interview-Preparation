@@ -380,7 +380,7 @@ public: accessible everywhere
 A child class can modify access to less strict. But error occurs if more strictness is added.
 Ex: if child class modify access to private from public, error occurs.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d1e7a9ac-eae3-4e21-bae1-e77ed329b063)
 
 
 Encapsulation is defined as the wrapping up of data under a single unit. It's also called as data-hiding.
@@ -453,6 +453,50 @@ All methods are public static final in interfaces.
 Multiple inheritance allowed in interfaces.
 
 Encapsulation is data hiding(information hiding) while Abstraction is detail hiding(implementation hiding).
+
+
+=============File handling:==================================================
+ ![image](https://github.com/user-attachments/assets/8097a418-39bd-4783-9f03-9d824c95b149)
+
+.createNewFile() will create file and return true/false if file created
+.exists() will return true/false if file is present
+Class FILE is used to create file
+In char stream classes, below methods can be implemented
+Read() and write() can be performed on the file
+
+You can read a file using scanner class as below:
+Scanner in=new Scanner(obj) -> obj is file
+while(in.hasNextLine()) -> will return true if data is present
+Data=in.nextLine() -> will return data
+
+I had created a file as in.txt in D folder
+in.getName()
+in.getAbsolutePath()
+in.canWrite()
+in.canRead()
+in.length()
+
+output for above methods:
+in.txt
+D:\in.txt
+true
+true
+0
+====================multi threading===============
+ ![Uploading image.png…]()
+
+Multithreading: It is the process of concurrent execution of parts of a program for better resource utilization
+But issue with multithreading is race condition n deadlock
+Race condition: They occur when two computer program processes, or threads, attempt to access the same resource at the same time and cause problems in the system.
+Deadlock: Deadlock describes a situation where two or more threads are blocked forever, waiting for each other.
+Thread can be created using 2 ways:
+Using thread class and runnable interface
+Thread class:
+Run(): add code that needs to be run in thread here
+Start(): will start the new thread other than main()
+Sleep(1): will sleep the main method for 1 milli second
+When you need multithreading and multiple inheretence, we use runnable interface
+
 
 
 
