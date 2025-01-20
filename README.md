@@ -305,6 +305,9 @@ Math.max(n1,n2) will return max value between n1 and n2
 
 Integer.parseInt(str) will convert string value into the int type.
 
+=======================================================================================================
+PROGRAMMING - ADVANCED:
+
 4. Advanced
 Biginteger is a class in java which stores large values. BigInteger class is present in java.math.* library.
 Syntax:
@@ -336,10 +339,7 @@ BigInteger pow​(int exponent): This method returns a BigInteger whose value is
 BigInteger shiftLeft​(int n): This method returns a BigInteger whose value is (this << n).
 BigInteger shiftRight​(int n): This method returns a BigInteger whose value is (this >> n).
 BigInteger sqrt​(): This method returns the integer square root of this BigInteger.
-
-=======================================================================================================
-PROGRAMMING - ADVANCED:
-
+ ========================================================
 1. Lambda expression: It's a function without name and class. They are implemented using functional interface.
 With lambda expression, you don't need to create a child class to implement that method, you can create directly.
 Use curly braces for multi line statements.
@@ -361,6 +361,60 @@ l.stream
 
 // Method reference
 ClassName::staticMethod
+
+============FILE HANDLING==================================================
+java.io.file used for file handling
+
+Input and ouput takes place in the form of streams
+Stream is a sequence of data. Stream is of 2 types: byte(1 byte) and character(2 bytes)
+
+for byte stream, we use fileInputStream and FileOutputStream class to create obj
+for char stream, we use fileReader and fileWriter class
+
+FIle methods:
+
+in.read() will read and return -1 if file is empty or eof.Else it will return file data
+
+==============EXCEPTION HANDLING=========================================
+
+It's a case where you handle special cases where program doesn't handle. 
+
+Advantages:
+1. Separating the error logic from main code; helps in readibility
+2. Propagaing the error up in the function call
+3. Grouping and differentiating error conditions
+
+Examples:
+Advantages:
+
+Throwable class is the superclass of all exceptions. There are 2 main subclasses of it:
+error class: THis class handles errors that are not in programmer's control
+eg: virtualmachine error, IO error
+
+Exception class: This class handles programmer's cases. It is divided into checked n unchecked
+Checked: It covers cases where compiler checks the logic and it is mandatory(compiler forces) to include exception for these cases. Example: filenotfound, IO exception
+
+Unchecked: It covers logic cases where it's not necessary to include exception but it might break the code for certain cases. Example: arrayindexbound, arithmetic exception and null pointer exception
+
+Important keywords:
+try: here all code where exception might occur is coded
+catch: code to handle the given type exception
+finally: code that occurs irrespective of exception occurs or not
+throw: used to throw an exception ( eg: if age is less than 18, you throw an exception
+throws: used with method definition. It indicates that this function might throw this exception. The exception must be handled inside the function or where the function is called
+
+EG: void fun() throws IOexception{}. 
+
+ex.printStackTrace() will return the stack path where exception occurred.
+
+While placing catch ladder order, Always place highest parent class of exception at the bottom and so on.
+Example:
+catch(arithmeticException){}
+catch(ArrayBOUND){}
+catch(exception){}
+
+While defining userdefined exceptions, prevent creating runtime exceptions as these are not checked by compiler
+
 
 ==========================================================CLASSES N OBJECTS====================================================================================
 1. CLASS n OBJECTS:
